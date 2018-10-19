@@ -8,7 +8,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
   private float temperature;
   private float humidity;
 
-  public CurrentConditionsDisplay() {
+  public CurrentConditionsDisplay(Observable observable) {
     this.observable = observable;
     observable.addObserver(this);
   }
@@ -26,7 +26,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
   @Override
   public void display() {
-    System.out.println("current conditions: " + temperature + "F degrees and " + humidity + "% " +
+    System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% " +
         "humidity.");
   }
 }

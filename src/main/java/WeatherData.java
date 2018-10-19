@@ -9,7 +9,6 @@ public class WeatherData extends Observable {
   private float pressure;
 
   public WeatherData() {
-
   }
 
   // Note: Observers register themselves using the Observable superclass addObserver() method so we
